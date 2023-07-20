@@ -399,6 +399,10 @@ footer .footer-info a {
     display: inline-block;
   }
 
+  .navbar {
+    padding: 1.5rem 7%;
+  }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -425,7 +429,7 @@ footer .footer-info a {
   .hero img {
     width: 100%;
     height: auto;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   .hero a.cta {
     margin-left: 0;
