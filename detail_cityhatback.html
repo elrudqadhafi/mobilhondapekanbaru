@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk</title>
+
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- style css internal start -->
+    <style>
+      :root {
+        --primary: #0c075e;
+        --secondary: #a80008;
+        --bg: #eaeaea;
+        --text-color: #010101;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg);
+        color: var(--text-color);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 7%;
+        background-color: var(--secondary);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+      }
+      .navbar .navbar-nav a {
+        color: var(--bg);
+        margin: 0 1rem;
+      }
+      .navbar .navbar-nav a:hover {
+        color: var(--text-color);
+      }
+      .navbar .navbar-extra a {
+        color: var(--bg);
+      }
+      #hamburger-menu {
+        display: none;
+      }
+      .navbar img {
+        width: 2.5rem;
+        margin-left: 4rem;
+      }
+      .navbar .navbar-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--bg);
+        margin-left: 1rem;
+        margin-right: auto;
+        letter-spacing: 2px;
+      }
+      a.cta {
+        display: inline-block;
+        width: 10rem;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: var(--bg);
+        color: var(--text-color);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s all ease-in-out;
+        border-radius: 8px;
+        margin-left: 1rem;
+      }
+      a.cta:hover {
+        background-color: var(--primary);
+        color: var(--bg);
+        transition: 0.3s all ease-in;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100vh;
+        padding: 3rem 0;
+      }
+      .content,
+      .spek,
+      .color {
+        margin: 0 3rem 0 3rem;
+      }
+      .content h1,
+      .spek h1,
+      .color h1 {
+        font-size: 2rem;
+        margin-top: 1.2rem;
+        font-weight: 500;
+      }
+      .content .garis,
+      .spek .garis,
+      .color .garis {
+        margin-top: 1px;
+        background: var(--secondary);
+        width: 50rem;
+        height: 3px;
+        opacity: 50%;
+      }
+      .section::-webkit-scrollbar {
+        height: 4px;
+        border-radius: 10px;
+        background: transparent;
+      }
+      .section::-webkit-scrollbar-thumb {
+        background: var(--secondary);
+      }
+      .section {
+        display: flex;
+        overflow: auto;
+        scroll-behavior: smooth;
+        padding-left: 2px;
+      }
+      .section .box {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        margin: auto;
+        border-radius: 10px;
+        width: 25rem;
+        text-align: center;
+        height: 21rem;
+        margin-right: 1.2rem;
+        margin-top: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      .section .box img {
+        width: 250px;
+        /* height: 150px; */
+        margin-top: 3rem;
+      }
+      .section .box h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 1rem;
+      }
+      .section .box h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 8px;
+        margin-bottom: 1rem;
+      }
+      .section .box a {
+        font-size: 1rem;
+        border: 1px solid var(--secondary);
+        padding: 8px 1rem;
+        border-radius: 5px;
+        font-weight: 600;
+        color: var(--secondary);
+        transition: 0.3s all ease-in-out;
+      }
+      .section .box a:hover {
+        background-color: var(--secondary);
+        color: var(--bg);
+        transition: 0.3s all ease-in-out;
+      }
+
+      .wrapper {
+        border: 1px solid var(--text-color);
+        border-radius: 5px;
+        padding: 1rem 1rem;
+      }
+      .wrapper img {
+        width: 100%;
+      }
+
+      .desk {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        margin-left: 2rem;
+      }
+
+      .desk .wrapper {
+        width: calc(33% - 20px);
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+      }
+      .desk .wrapper h3 {
+        margin: 1rem 0;
+      }
+      .color .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+      }
+      .color .color-content h3 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .color .color-card {
+        text-align: center;
+        /* border: 1px solid var(--text-color); */
+      }
+      .color .color-image img {
+        width: 80%;
+        margin-top: 2rem;
+      }
+/* footer */
+footer {
+  background-color: var(--text-color);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+footer a {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--bg);
+}
+
+.footer-nav {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+
+.footer-nav a {
+  margin: 1.5rem;
+  font-weight: 500;
+  color: var(--bg);
+}
+
+.footer-social {
+  margin-bottom: 2rem;
+}
+
+.footer-social a {
+  margin-right: 2rem;
+  color: var(--bg);
+}
+
+.footer-copyright {
+  flex-basis: 100%;
+  color: var(--bg);
+}
+      /* media query */
+      /* laptop */
+      @media (max-width: 1366px) {
+        html {
+          font-size: 70%;
+        }
+      }
+      /* tablet */
+      @media (max-width: 758px) {
+        html {
+          font-size: 62.5%;
+        }
+        .navbar {
+          padding: 1rem 5%;
+        }
+        .navbar img {
+          width: 2.5rem;
+          margin-left: 1rem;
+        }
+        a.cta {
+          margin-right: 2rem;
+        }
+        #hamburger-menu {
+          display: inline-block;
+          margin-top: 0.3rem;
+        }
+        .navbar .navbar-nav {
+          position: absolute;
+          top: 100%;
+          right: -100%;
+          background-color: var(--secondary);
+          width: 30rem;
+          height: 100vh;
+          transition: 0.5s;
+        }
+        .navbar .navbar-nav.active {
+          right: 0;
+        }
+        .navbar .navbar-nav a {
+          color: var(--bg);
+          display: block;
+          margin: 4rem;
+          padding: 0.5rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .hero img {
+          width: 100%;
+          height: fit-content;
+          padding: 4.5rem 0;
+        }
+        .section .box {
+          width: 100%;
+          height: 30rem;
+        }
+        .section .box h3 {
+          margin-bottom: 2rem;
+        }
+        .desk {
+          margin-left: 0;
+        }
+        .desk .wrapper {
+          width: 100%;
+          margin-right: 0;
+        }
+      .content .garis,
+      .spek .garis,
+      .color .garis {
+        width: 30rem;
+      }
+      }
+      /* mobile */
+      @media (max-width: 500px) {
+        html {
+          font-size: 55%;
+        }
+      }
+    </style>
+    <!-- style css internal end -->
+  </head>
+
+  <body>
+    <!-- nav start -->
+    <nav class="navbar">
+      <img src="assets/logotitle.png" alt="logo" />
+      <a href="#" class="navbar-logo">HondaPekanbaru</a>
+      <div class="navbar-nav">
+        <a href="index.html#beranda">Beranda</a>
+        <a href="index.html#about">Marketing</a>
+        <a href="index.html#produk">Produk</a>
+        <a href="index.html#kontak">Kontak</a>
+      </div>
+      
+      <a href="https://wa.me/6281268235749" class="cta">Hubungi saya</a>
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- nav end -->
+    
+    <!-- banner start -->
+    <div class="hero">
+      <img src="assets/bannercityhatbak.jpg" alt="" />
+    </div>
+    <!-- banner end -->
+
+    <!-- harga pruduk start -->
+    <div class="content">
+      <h1>Type Dan Harga</h1>
+
+      <div class="garis"></div>
+
+      <div class="section">
+        <div class="box">
+          <img src="assets/cityrshatbakmt.png" alt="" />
+          <h4>Honda City Hatchback RS M/T</h4>
+          <h3>Rp 352.600.000</h3>
+          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+        </div>
+        <div class="box">
+          <img src="assets/cityrshatbakcvt.png" alt="" />
+          <h4>Honda City Hatchback RS CVT</h4>
+          <h3>Rp 362.600.000</h3>
+          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+        </div>
+        <div class="box">
+          <img src="assets/cityhatbakrscvtputih.png" alt="" />
+          <h4>Honda City RS-HS CVT</h4>
+          <h3>Rp 382.600.000</h3>
+          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+        </div>
+      </div>
+      <div style="margin-bottom: 1rem; color: var(--secondary)"><em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em></div>
+    </div>
+    <!-- harga pruduk end -->
+
+    <!-- spek start -->
+    <div class="spek">
+      <h1>Spesifikasi & Design</h1>
+
+      <div class="garis"></div>
+
+      <div class="desk">
+        <div class="wrapper">
+          <h3>Honda City HatchBack RS M/T</h3>
+          <p>
+            - 1.5L DOHC i-VTEC Engine 121PS <br />
+            - 6 M/T / CVT with Earth Dreams Technology <br />
+            - LED Headlamp with LED DRL <br />
+            - LED Fog Light <br />
+            - Black Door Mirror with LED Turning Signal <br />
+            - 16" Sporty Alloy Wheel <br />
+            - One Push Ignition System <br />
+            - Auto A/C with Red Illumination <br />
+            - Suede-Fabric Leather Combi Trimmed Seats<br />
+            - 8" Capacitive Touchscreen Display Audio <br />
+            - 8-Speakers<br />
+            - 2nd Row Power Outlet <br />
+            - Multi-Angle Rear View Camera <br />
+            - Remote Engine Start <br />
+            - ABS + EBD + BA <br />
+            - Brake Override System.
+          </p>
+        </div>
+        <div class="wrapper">
+          <h3>Honda City HatchBack RS CVT</h3>
+          <p>
+            - 1.5L DOHC i-VTEC Engine 121PS <br />
+            - 6 M/T / CVT with Earth Dreams Technology <br />
+            - LED Headlamp with LED DRL <br />
+            - LED Fog Light <br />
+            - Black Door Mirror with LED Turning Signal <br />
+            - 16" Sporty Alloy Wheel <br />
+            - One Push Ignition System <br />
+            - Auto A/C with Red Illumination <br />
+            - Suede-Fabric Leather Combi Trimmed Seats<br />
+            - 8" Capacitive Touchscreen Display Audio <br />
+            - 8-Speakers<br />
+            - 2nd Row Power Outlet <br />
+            - Multi-Angle Rear View Camera <br />
+            - Remote Engine Start <br />
+            - ABS + EBD + BA <br />
+            - Brake Override System.
+          </p>
+        </div>
+        <div class="wrapper">
+          <h3>Honda City HatchBack RS-HS CVT</h3>
+          <p>
+            Memiliki Semua Fitur di type RS CVT, <br>
+            Ditambah: <br>
+            <br/>
+            - Honda Sensing <br>
+            - 7" Interactive TFT Meter Cluster <br>
+            - Honda LaneWatch <br>
+            - Auto HeadLight <br>
+            - Walk-Away Auto Lock
+          </p>
+        </div>
+        <div class="wrapper">
+          <img src="assets/cityhtin1.jpg" alt="">
+          <img src="assets/cityhtin2.jpg" alt="">
+        </div>
+        <div class="wrapper">
+          <img src="assets/cityhttek1.jpg" alt="">
+          <img src="assets/cityhttek2.jpg" alt="">
+        </div>
+        <div class="wrapper">
+          <img src="assets/cityhs1.jpg" alt="">
+          <img src="assets/cityhs2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- spek end -->
+
+    <!-- Warna city hatchback start -->
+    <div class="color">
+      <h1>Warna Honda City HatchBack</h1>
+      <div class="garis"></div>
+
+      <div class="row">
+        <div class="color-card">
+          <div class="color-image">
+            <img src="assets/citymerah.png" alt="">
+          </div>
+          <div class="color-content">
+            <h3>Rallye Red</h3>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-image">
+            <img src="assets/cityorange.png" alt="">
+          </div>
+          <div class="color-content">
+            <h3>Phoenix Orange pearl</h3>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-image">
+            <img src="assets/cityblack.png" alt="">
+          </div>
+          <div class="color-content">
+            <h3>Crystal Black Pearl</h3>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-image">
+            <img src="assets/cityputih.png" alt="">
+          </div>
+          <div class="color-content">
+            <h3>Platinum White Pearl</h3>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-image">
+            <img src="assets/citygray.png" alt="">
+          </div>
+          <div class="color-content">
+            <h3>Meteroid Gray Metallic</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warna city hatchback end -->
+
+    <!-- footer start -->
+      <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <img src="assets/logotitle.png" alt="Logo Perusahaan" class="footer-logo">
+        <p>PT.KERTA JAYA UTAMA</p>
+        <p>Jl. SM Amin No.168, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau 28292</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Beranda</a>
+        <a href="#about">Marketng</a>
+        <a href="#produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/mhdghofarr/"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="https://wa.me/6281268235749"><i data-feather="phone"></i></a>
+      </div>
+    </div>
+    <p class="footer-copyright">
+      Created By .| &copy; <a href="https://www.instagram.com/rudqadhafi/">Elrud Qadhafi</a> 2023.
+    </p>
+  </footer>
+    <!-- footer end -->
+
+    <script>
+      // toggle class active
+const navbarNav = document.querySelector(".navbar-nav")
+// ketika hamburger diklik
+document.querySelector("#hamburger-menu").onclick = e => {
+  navbarNav.classList.toggle("active")
+  e.preventDefault()
+}
+
+// klik diluar sidebar untuk menghilangkan nav
+const hamburger = document.querySelector("#hamburger-menu")
+
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active")
+  }
+})
+
+// Ketika tautan di dalam navbar diklik
+const navbarLinks = document.querySelectorAll(".navbar-nav a")
+navbarLinks.forEach(link => {
+  link.onclick = () => {
+    navbarNav.classList.remove("active")
+  }
+})
+
+    </script>
+
+    <!-- feather icons -->
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
