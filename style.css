@@ -464,8 +464,8 @@ footer .footer-info a {
   }
 
   .produk .produk-detail a {
-    padding: 0.5rem;
-    width: 11rem;
+    padding: 1rem;
+    width: 12rem;
   }
 
   .kontak .row {
@@ -474,7 +474,7 @@ footer .footer-info a {
 
   .kontak .row .map {
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
   }
 
   .kontak .row form {
