@@ -424,8 +424,8 @@ footer .footer-info a {
 
   .hero img {
     width: 100%;
-    height: fit-content;
-    padding: 3rem 0;
+    height: auto;
+    margin-top: 3rem;
   }
   .hero a.cta {
     margin-left: 0;
@@ -469,6 +469,7 @@ footer .footer-info a {
   }
 
   .kontak .row .map {
+    width: 100%;
     height: 30rem;
   }
 
@@ -484,6 +485,6 @@ footer .footer-info a {
 /* mobile */
 @media (max-width: 500px) {
   html {
-    font-size: 55%;
+    font-size: 59%;
   }
 }
