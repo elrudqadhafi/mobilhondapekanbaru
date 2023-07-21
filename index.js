@@ -28,7 +28,7 @@ navbarLinks.forEach(link => {
   const form = document.forms['honda-contact-form']
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    // e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
         form.reset()
