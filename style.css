@@ -299,10 +299,10 @@ body {
 }
 .kontak .row form .input-group textarea {
   background: none;
-  width: 100%;
+  width: 100% ;
 }
 
-.kontak .row form .btn-kirim {
+.kontak .row form .btn {
   margin-top: 3rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -315,6 +315,7 @@ body {
   cursor: pointer;
   transition: .3s all ease-in;
 }
+
 .kontak .row form .btn:hover {
   background-color: #980005;
   transition: .3s all ease-in;
