@@ -281,25 +281,22 @@ body {
   margin-bottom: 1rem;
 }
 
-/* testimoni */
-.slider {
-  width: 100%;
-  overflow: hidden;
+/* swiper */
+
+.img_box img {
+  max-width: 100%;
+  width: 400px;
 }
 
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
+.slider_container .container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
-  margin: 1rem 1rem;
+.card_slider {
+  padding-bottom: 50px;
 }
-
 /* kontak section */
 
 .kontak .row {
@@ -527,7 +524,7 @@ footer .footer-info a {
 
   .kontak .row .map {
     width: 100%;
-    /* height: 30rem; */
+    height: 30rem;
   }
 
   .kontak .row form {
