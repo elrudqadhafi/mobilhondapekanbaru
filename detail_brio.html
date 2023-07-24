@@ -10,7 +10,10 @@
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- style css internal start -->
     <style>
@@ -35,6 +38,50 @@
         font-family: "Poppins", sans-serif;
         background-color: var(--bg);
         color: var(--text-color);
+      }
+
+      /* btn floating */
+      .btn-floating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background-color: #0e7400;
+        right: 25px;
+        bottom: 25px;
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        border: 0;
+        z-index: 9999;
+        color: white;
+        transition: 0.2s;
+      }
+      .btn-floating img {
+        width: 55px;
+        margin-top: 4px;
+        margin-left: 2px;
+        margin-bottom: 6px;
+      }
+      .btn-floating:hover {
+        width: auto;
+        padding-right: 20px;
+        padding-left: 10px;
+        cursor: pointer;
+      }
+      .btn-floating span {
+        font-size: 16px;
+        margin-left: 5px;
+        transition: 0.2s;
+        line-height: 0px;
+        display: none;
+      }
+      .btn-floating:hover span {
+        display: inline-block;
+      }
+      .btn-floating:hover img {
+        margin-bottom: 5px;
       }
 
       .navbar {
@@ -134,7 +181,8 @@
         padding-left: 2px;
       }
       .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         margin: auto;
         border-radius: 10px;
         width: 17rem;
@@ -216,62 +264,62 @@
         width: 80%;
         margin-top: 2rem;
       }
-/* footer */
-footer {
-  background-color: var(--text-color);
-  padding: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
+      /* footer */
+      footer {
+        background-color: var(--text-color);
+        padding: 1.5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
 
-footer a {
-  color: var(--secondary);
-  font-weight: 700;
-}
+      footer a {
+        color: var(--secondary);
+        font-weight: 700;
+      }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
 
-.footer-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
+      .footer-logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
 
-.footer-info {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--bg);
-}
+      .footer-info {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--bg);
+      }
 
-.footer-nav {
-  flex-basis: 100%;
-  margin-bottom: 2rem;
-}
+      .footer-nav {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+      }
 
-.footer-nav a {
-  margin: 1.5rem;
-  font-weight: 500;
-  color: var(--bg);
-}
+      .footer-nav a {
+        margin: 1.5rem;
+        font-weight: 500;
+        color: var(--bg);
+      }
 
-.footer-social {
-  margin-bottom: 2rem;
-}
+      .footer-social {
+        margin-bottom: 2rem;
+      }
 
-.footer-social a {
-  margin-right: 2rem;
-  color: var(--bg);
-}
+      .footer-social a {
+        margin-right: 2rem;
+        color: var(--bg);
+      }
 
-.footer-copyright {
-  flex-basis: 100%;
-  color: var(--bg);
-}
+      .footer-copyright {
+        flex-basis: 100%;
+        color: var(--bg);
+      }
       /* media query */
       /* laptop */
       @media (max-width: 1366px) {
@@ -285,7 +333,7 @@ footer a {
           font-size: 65%;
         }
         .navbar {
-          padding: 1.5rem 7%;
+          padding: 1rem 4%;
         }
         .navbar img {
           width: 2.5rem;
@@ -337,11 +385,11 @@ footer a {
           width: 100%;
           margin-right: 0;
         }
-      .content .garis,
-      .spek .garis,
-      .color .garis {
-        width: 30rem;
-      }
+        .content .garis,
+        .spek .garis,
+        .color .garis {
+          width: 30rem;
+        }
       }
       /* mobile */
       @media (max-width: 500px) {
@@ -354,24 +402,29 @@ footer a {
   </head>
 
   <body>
+    <a href="https://wa.me/6281268235749">
+      <button class="btn-floating">
+        <img src="assets/whatsapp.png" alt="WhatsApp" />
+        <span>081268235749</span>
+      </button>
+    </a>
     <!-- nav start -->
     <nav class="navbar">
       <img src="assets/logotitle.png" alt="logo" />
-      <a href="#" class="navbar-logo">HondaPekanbaru</a>
+      <a href="#" class="navbar-logo">Ghofar.HondaPekanbaru</a>
       <div class="navbar-nav">
         <a href="index.html#beranda">Beranda</a>
         <a href="index.html#about">Marketing</a>
         <a href="index.html#produk">Produk</a>
         <a href="index.html#kontak">Kontak</a>
       </div>
-      
-      <a href="https://wa.me/6281268235749" class="cta">Hubungi saya</a>
+
       <div class="navbar-extra">
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
     <!-- nav end -->
-    
+
     <!-- banner start -->
     <div class="hero">
       <img src="assets/bannerbrio.jpg" alt="" />
@@ -416,8 +469,12 @@ footer a {
           <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
         </div>
       </div>
-      <div style="margin-top: 1rem; color: var(--secondary)"><em> **Tersedia Two Tone Color Dengan Penambahan Harga 2,5 JT</em></div>
-      <div style="margin-bottom: 1rem; color: var(--secondary)"><em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em></div>
+      <div style="margin-top: 1rem; color: var(--secondary)">
+        <em> **Tersedia Two Tone Color Dengan Penambahan Harga 2,5 JT</em>
+      </div>
+      <div style="margin-bottom: 1rem; color: var(--secondary)">
+        <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
     </div>
     <!-- harga pruduk end -->
 
@@ -531,20 +588,20 @@ footer a {
           </p>
         </div>
         <div class="wrapper">
-          <img src="assets/eksbrio1.jpg" alt="">
-          <img src="assets/eksbrio2.jpg" alt="">
+          <img src="assets/eksbrio1.jpg" alt="" />
+          <img src="assets/eksbrio2.jpg" alt="" />
         </div>
         <div class="wrapper">
-          <img src="assets/briocom1.jpg" alt="">
-          <img src="assets/briocom2.jpg" alt="">
+          <img src="assets/briocom1.jpg" alt="" />
+          <img src="assets/briocom2.jpg" alt="" />
         </div>
         <div class="wrapper">
-          <img src="assets/inbrio1.jpg" alt="">
-          <img src="assets/inbrio5.jpg" alt="">
+          <img src="assets/inbrio1.jpg" alt="" />
+          <img src="assets/inbrio5.jpg" alt="" />
         </div>
         <div class="wrapper">
-          <img src="assets/briocom3.jpg" alt="">
-          <img src="assets/briocom4.jpg" alt="">
+          <img src="assets/briocom3.jpg" alt="" />
+          <img src="assets/briocom4.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -558,7 +615,7 @@ footer a {
       <div class="row">
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/briomerah.png" alt="">
+            <img src="assets/briomerah.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Rallye Red (Satya)</h3>
@@ -566,7 +623,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/brio.png" alt="">
+            <img src="assets/brio.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Phoenix Orange pearl (RS)</h3>
@@ -574,7 +631,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/briohitam.png" alt="">
+            <img src="assets/briohitam.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Crystal Black Pearl</h3>
@@ -582,7 +639,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/briosilver.png" alt="">
+            <img src="assets/briosilver.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Steel Diamond Pearl (RS)</h3>
@@ -590,7 +647,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/briogray.png" alt="">
+            <img src="assets/briogray.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Meteroid Gray Metallic</h3>
@@ -598,7 +655,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/briokuning.png" alt="">
+            <img src="assets/briokuning.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Electric Lime Metallic</h3>
@@ -606,7 +663,7 @@ footer a {
         </div>
         <div class="color-card">
           <div class="color-image">
-            <img src="assets/brioputih.png" alt="">
+            <img src="assets/brioputih.png" alt="" />
           </div>
           <div class="color-content">
             <h3>Taffate White (Satya)</h3>
@@ -619,56 +676,68 @@ footer a {
 
     <!-- footer start -->
     <footer>
-    <div class="footer-container">
-      <div class="footer-info">
-        <img src="assets/logotitle.png" alt="Logo Perusahaan" class="footer-logo">
-        <p>PT.KERTA JAYA UTAMA</p>
-        <p>Jl. SM Amin No.168, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau 28292</p>
+      <div class="footer-container">
+        <div class="footer-info">
+          <img
+            src="assets/logotitle.png"
+            alt="Logo Perusahaan"
+            class="footer-logo"
+          />
+          <p>PT.KERTA JAYA UTAMA</p>
+          <p>
+            Jl. SM Amin No.168, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau
+            28292
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Beranda</a>
+          <a href="#about">Marketng</a>
+          <a href="#produk">Produk</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/mhdghofarr/"
+            ><i data-feather="instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100006317416375&mibextid=ZbWKwL"
+            ><i data-feather="facebook"></i
+          ></a>
+          <a href="https://wa.me/6281268235749"><i data-feather="phone"></i></a>
+        </div>
       </div>
-      <nav class="footer-nav">
-        <a href="#">Beranda</a>
-        <a href="#about">Marketng</a>
-        <a href="#produk">Produk</a>
-        <a href="#kontak">Kontak</a>
-      </nav>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/mhdghofarr/"><i data-feather="instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100006317416375&mibextid=ZbWKwL"><i data-feather="facebook"></i></a>
-        <a href="https://wa.me/6281268235749"><i data-feather="phone"></i></a>
-      </div>
-    </div>
-    <p class="footer-copyright">
-      Created By .| &copy; <a href="https://www.instagram.com/rudqadhafi/">Elrud Qadhafi</a> 2023.
-    </p>
-  </footer>
+      <p class="footer-copyright">
+        Created By .| &copy;
+        <a href="https://www.instagram.com/rudqadhafi/">Elrud Qadhafi</a> 2023.
+      </p>
+    </footer>
     <!-- footer end -->
 
     <script>
       // toggle class active
-const navbarNav = document.querySelector(".navbar-nav")
-// ketika hamburger diklik
-document.querySelector("#hamburger-menu").onclick = e => {
-  navbarNav.classList.toggle("active")
-  e.preventDefault()
-}
+      const navbarNav = document.querySelector(".navbar-nav")
+      // ketika hamburger diklik
+      document.querySelector("#hamburger-menu").onclick = (e) => {
+        navbarNav.classList.toggle("active")
+        e.preventDefault()
+      }
 
-// klik diluar sidebar untuk menghilangkan nav
-const hamburger = document.querySelector("#hamburger-menu")
+      // klik diluar sidebar untuk menghilangkan nav
+      const hamburger = document.querySelector("#hamburger-menu")
 
-document.addEventListener("click", function (e) {
-  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active")
-  }
-})
+      document.addEventListener("click", function (e) {
+        if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbarNav.classList.remove("active")
+        }
+      })
 
-// Ketika tautan di dalam navbar diklik
-const navbarLinks = document.querySelectorAll(".navbar-nav a")
-navbarLinks.forEach(link => {
-  link.onclick = () => {
-    navbarNav.classList.remove("active")
-  }
-})
-
+      // Ketika tautan di dalam navbar diklik
+      const navbarLinks = document.querySelectorAll(".navbar-nav a")
+      navbarLinks.forEach((link) => {
+        link.onclick = () => {
+          navbarNav.classList.remove("active")
+        }
+      })
     </script>
 
     <!-- feather icons -->
