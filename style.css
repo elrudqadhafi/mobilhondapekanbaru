@@ -523,9 +523,7 @@ footer .footer-info a {
   }
 
   .kontak .row .map {
-    max-width: 100%;
-    width: 50rem;
-    height: 30rem;
+    width: 100%;
   }
 
   .kontak .row form {
