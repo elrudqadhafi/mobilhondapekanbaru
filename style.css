@@ -120,7 +120,7 @@ body {
 }
 .hero a.cta {
   position: absolute;
-  bottom: 24px;
+  bottom: 16px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -482,7 +482,7 @@ footer .footer-info a {
   }
   .hero a.cta {
     margin-left: 0;
-    padding: 1rem 2rem;
+    /* padding: 0 2rem; */
   }
 
   .about .row {
