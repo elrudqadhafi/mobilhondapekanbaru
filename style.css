@@ -120,7 +120,7 @@ body {
 }
 .hero a.cta {
   position: absolute;
-  top: 50%;
+  bottom: 24px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -515,7 +515,8 @@ footer .footer-info a {
 
   .produk .produk-detail a {
     padding: 1rem;
-    width: 12rem;
+    font-size: 1.4rem;
+    width: 14rem;
   }
 
   .kontak .row {
