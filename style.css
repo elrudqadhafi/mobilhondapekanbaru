@@ -451,7 +451,7 @@ footer .footer-info a {
 
   .navbar img {
     width: 2.5rem;
-    margin-left: 1rem;
+    margin-left: 0;
   }
 
   .navbar .navbar-nav {
