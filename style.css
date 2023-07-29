@@ -118,7 +118,14 @@ body {
   width: 100%;
   position: relative;
 }
-.hero a.cta {
+
+.hero img {
+  width: 100%;
+  height: 90vh;
+  margin-top: 3rem;
+}
+
+/* .hero a.cta {
   position: absolute;
   bottom: 16px;
   left: 50%;
@@ -136,7 +143,7 @@ body {
   background-color: var(--bg);
   color: var(--text-color);
   transition: 0.3s all ease-in;
-}
+} */
 
 /* about section */
 .about,
@@ -150,7 +157,7 @@ body {
 .kontak h2,
 .testimoni h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   margin-bottom: 5rem;
   letter-spacing: 3px;
 }
@@ -166,7 +173,7 @@ body {
 }
 
 .about .row .about-img {
-  flex: 1 1 45rem;
+  flex: 1 1 35rem;
 }
 
 .about .row .about-img img {
@@ -184,26 +191,37 @@ body {
   font-weight: 500;
 }
 
-.about .row a.cta {
-  background-color: var(--secondary);
-  color: var(--bg);
-  padding: 1rem 2rem;
-  border-radius: 5px;
-}
-
 .about .row .content p {
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 1px;
 }
 
-.about .row .content a {
-  margin-top: 2rem;
-  margin-left: 17rem;
-  gap: 1.5rem;
-  margin-top: 4rem;
+.sosial-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sosial-media a {
+  background-color: var(--secondary);
+  padding: 0 1rem;
+  color: var(--bg);
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.sosial-media a:hover {
+  background-color: #ff000d;
+}
+
+.size-38 {
+  width: 32px;
+  height: 32px;
+  margin-top: 0.8rem;
 }
 
 /* type car */
@@ -477,8 +495,8 @@ footer .footer-info a {
 
   .hero img {
     width: 100%;
-    height: auto;
-    margin-top: 4rem;
+    height: 100%;
+    margin-top: 5rem;
   }
   .hero a.cta {
     margin-left: 0;
