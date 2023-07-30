@@ -66,7 +66,7 @@ var swiper = new Swiper(".card_slider", {
 })
 
 var swiper = new Swiper(".mySwiper", {
-  // spaceBetween: 10,
+  loop: true,
   centeredSlides: true,
   autoplay: {
     delay: 3500,
