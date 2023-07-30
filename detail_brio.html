@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Produk</title>
 
+    <!-- swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- font style -->
@@ -166,67 +172,45 @@
         height: 3px;
         opacity: 50%;
       }
-      .section::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
+
+      .card_swipper {
+        width: 90%;
       }
-      .section::-webkit-scrollbar-thumb {
-        background: var(--secondary);
-      }
-      .section {
-        display: flex;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding-left: 2px;
-      }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        border-radius: 10px;
-        width: 17rem;
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 5rem auto;
         text-align: center;
-        height: 19rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 200px;
-        height: 150px;
-      }
-      .section .box h4 {
-        font-size: 1.5rem;
-        font-weight: 600;
+      .card_swipper .swiper-slide img {
+        width: 250px;
         margin-top: 1rem;
       }
-      .section .box h3 {
+      .card_swipper .swiper-slide h3 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+      }
+      .card_swipper .swiper-slide p {
         font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
       }
-      .section .box a {
+      .card_swipper .swiper-slide .spesifikasi ul {
+        background-color: #cecece;
+        text-align: left;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
         font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
-        color: var(--secondary);
-        transition: 0.3s all ease-in-out;
+        margin-top: 1rem;
       }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+      .card_swipper .swiper-button-next {
+        top: 40%;
+      }
+      .card_swipper .swiper-button-prev {
+        top: 40%;
       }
 
-      .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
-      }
       .wrapper img {
         width: 100%;
       }
@@ -248,7 +232,7 @@
       }
       .color .row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         margin-top: 2rem;
         margin-bottom: 5rem;
       }
@@ -372,13 +356,7 @@
           height: auto;
           margin-top: 1.7rem;
         }
-        .section .box {
-          width: 100%;
-          height: 30rem;
-        }
-        .section .box h3 {
-          margin-bottom: 2rem;
-        }
+
         .desk {
           margin-left: 0;
         }
@@ -390,6 +368,9 @@
         .spek .garis,
         .color .garis {
           width: 30rem;
+        }
+        .color .row {
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         }
       }
       /* mobile */
@@ -438,156 +419,137 @@
 
       <div class="garis"></div>
 
-      <div class="section">
-        <div class="box">
-          <img src="assets/briosmt.png" alt="" />
-          <h4>Brio Satya S M/T</h4>
-          <h3>Rp 179.900.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Honda Brio Satya SM/T</h2>
+            <img src="assets/briosmt.png" alt="brio" />
+            <h3>Rp 179.900.000*</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.2L i-VTEC 90PS with 4 Cilynder</li>
+                <li>5 M/T</li>
+                <li>Digital A/C</li>
+                <li>Chrome Front Grille</li>
+                <li>14" Trim Wheels</li>
+                <li>
+                  Black and Gray Interior Color with New Fabric Seat Pattern
+                </li>
+                <li>Auto Up/Down Windows with Anti Pimch</li>
+                <li>2nd Row Adjustable Headrest</li>
+                <li>Tilt Steering</li>
+                <li>Electric Power Steering</li>
+                <li>EBS + EBD</li>
+                <li>Parking Sensor</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda Brio Satya E M/T</h2>
+            <img src="assets/brioemt.png" alt="brio" />
+            <h3>Rp 190.200.000*</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type S <br />Ditambah:</p>
+                <br />
+                <li>HeadLamp with LED DRL</li>
+                <li>14" Two Tone Alloy Wheels</li>
+                <li>Rear Wiper</li>
+                <li>Audio Steering Switch with Illumination</li>
+                <li>Auto Door Lock by Speed</li>
+                <li>Alarm System</li>
+                <li>Shifter Illumination</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda Brio Satya E CVT</h2>
+            <img src="assets/brioecvt.png" alt="brio" />
+            <h3>Rp 210.200.000*</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type S <br />Ditambah:</p>
+                <br />
+                <li>HeadLamp with LED DRL</li>
+                <li>14" Two Tone Alloy Wheels</li>
+                <li>Rear Wiper</li>
+                <li>Audio Steering Switch with Illumination</li>
+                <li>Auto Door Lock by Speed</li>
+                <li>Alarm System</li>
+                <li>Shifter Illumination</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda Brio RS M/T</h2>
+            <img src="assets/briorsmt.png" alt="brio" />
+            <h3>Rp 244.400.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type E <br />Ditambah:</p>
+                <br />
+                <li>LED Headlights with LED Day Running Light</li>
+                <li>Dark Chrome Front Grille with New RS Emblem</li>
+                <li>LED Fog Lights</li>
+                <li>Chrome Front Grille</li>
+                <li>One Push Ignition System</li>
+                <li>Smart Entry System</li>
+                <li>1st Row Adjustable Headrest</li>
+                <li>Power Retractable Door Mirror with LED Turning Signal</li>
+                <li>15" Dark Chrome Alloy Wheels</li>
+                <li>Dan masih banyak lagi fitu Canggih lainnya</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda Brio RS CVT</h2>
+            <img src="assets/briorscvt.png" alt="brio" />
+            <h3>Rp 254.400.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type E <br />Ditambah:</p>
+                <br />
+                <li>LED Headlights with LED Day Running Light</li>
+                <li>Dark Chrome Front Grille with New RS Emblem</li>
+                <li>LED Fog Lights</li>
+                <li>Chrome Front Grille</li>
+                <li>One Push Ignition System</li>
+                <li>Smart Entry System</li>
+                <li>1st Row Adjustable Headrest</li>
+                <li>Power Retractable Door Mirror with LED Turning Signal</li>
+                <li>15" Dark Chrome Alloy Wheels</li>
+                <li>Dan masih banyak lagi fitu Canggih lainnya</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="box">
-          <img src="assets/brioemt.png" alt="" />
-          <h4>Brio Satya E M/T</h4>
-          <h3>Rp 190.200.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/brioecvt.png" alt="" />
-          <h4>Brio Satya E CVT</h4>
-          <h3>Rp 210.200.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/briorsmt.png" alt="" />
-          <h4>Honda Brio RS M/T</h4>
-          <h3>Rp 244.400.000*</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/briorscvt.png" alt="" />
-          <h4>Honda Brio RS CVT</h4>
-          <h3>Rp 254.400.000*</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      <div style="margin-top: 1rem; color: var(--secondary)">
-        <em> **Tersedia Two Tone Color Dengan Penambahan Harga 2,5 JT</em>
+      <div style="color: var(--secondary)">
+        <em>**Tersedia Two Tone Color Dengan Penambahan Harga 2,5JT</em>
       </div>
       <div style="margin-bottom: 1rem; color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div>
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
       </div>
     </div>
     <!-- harga pruduk end -->
 
     <!-- spek start -->
     <div class="spek">
-      <h1>Spesifikasi & Design</h1>
+      <h1>Design</h1>
 
       <div class="garis"></div>
 
       <div class="desk">
-        <div class="wrapper">
-          <h3>Type S M/T</h3>
-          <p>
-            - 1,2L i-VTEC 90PS with 4 cilynder <br />
-            - 5 M/T <br />
-            - Digital A/C <br />
-            - Chrome Front Grille <br />
-            - 14" Trim Wheels <br />
-            - Black And Gray Interior Color <br />
-            &nbsp;&nbsp; with New Fabric Seat Pattren <br />
-            - Auto Up/Down Windows with Anti Pinch <br />
-            - 2nd Row Adjustable Headrest <br />
-            - Tilt Steering <br />
-            - Electric Power Steering <br />
-            - EBS + EBD <br />
-            - Parking Sensor
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type E M/T</h3>
-          <p>
-            Memiliki Semua Fitur Di Type S. <br />
-            Ditambah: <br />
-            <br />
-            - HeadLamp With LED DRL <br />
-            - 14" Two Tone Alloy Wheels <br />
-            - Rear Wiper <br />
-            - Audio Steering Switch with Illumination <br />
-            - Auto Door Lock by Speed <br />
-            - Alarm System <br />
-            - Shifter Illumination <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type E CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type S. <br />
-            Ditambah: <br />
-            <br />
-            - HeadLamp With LED DRL <br />
-            - 14" Two Tone Alloy Wheels <br />
-            - Rear Wiper <br />
-            - Audio Steering Switch with Illumination <br />
-            - Auto Door Lock by Speed <br />
-            - Alarm System <br />
-            - Shifter Illumination <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type RS M/T</h3>
-          <p>
-            Memiliki Semua Fitur Di Type E. <br />
-            Ditambah: <br />
-            <br />
-            - LED Headlights with LED Day Running Light <br />
-            - Dark Chrome Front Grille with New RS Emblem <br />
-            - LED Fog Lights <br />
-            - Chrome Front Grille <br />
-            - One Push Ignition system <br />
-            - Smart Entry System <br />
-            - 1st Row Adjustable Headrest <br />
-            - Power Retractable Door Mirror with <br />
-            &nbsp;&nbsp; LED Turning Signal <br />
-            - 15" Dark Chrome Alloy Wheels<br />
-            - Smoked Rear Combi Lamp <br />
-            - Black Color Interior with Orange Stitch<br />
-            - Tailgate Spoiler with LED hight Mounth Stop Lamp <br />
-            - Rear Bumper With Diffuser <br />
-            - Sporty Dashbord Panel Pattern with Red & Gray <br />
-            &nbsp;&nbsp; Lining <br />
-            - Sporty Meter Cluster With Multi Information LCD <br />
-            &nbsp;&nbsp; Display <br />
-            - DLL
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type RS CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type E. <br />
-            Ditambah: <br />
-            <br />
-            - LED Headlights with LED Day Running Light <br />
-            - Dark Chrome Front Grille with New RS Emblem <br />
-            - LED Fog Lights <br />
-            - Chrome Front Grille <br />
-            - One Push Ignition system <br />
-            - Smart Entry System <br />
-            - 1st Row Adjustable Headrest <br />
-            - Power Retractable Door Mirror with <br />
-            &nbsp;&nbsp; LED Turning Signal <br />
-            - 15" Dark Chrome Alloy Wheels<br />
-            - Smoked Rear Combi Lamp <br />
-            - Black Color Interior with Orange Stitch<br />
-            - Tailgate Spoiler with LED hight Mounth Stop Lamp <br />
-            - Rear Bumper With Diffuser <br />
-            - Sporty Dashbord Panel Pattern with Red & Gray <br />
-            &nbsp;&nbsp; Lining <br />
-            - Sporty Meter Cluster With Multi Information LCD <br />
-            &nbsp;&nbsp; Display <br />
-            - DLL
-          </p>
-        </div>
         <div class="wrapper">
           <img src="assets/eksbrio1.jpg" alt="" />
           <img src="assets/eksbrio2.jpg" alt="" />
@@ -714,6 +676,9 @@
     </footer>
     <!-- footer end -->
 
+    <!-- script swiperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
       // toggle class active
       const navbarNav = document.querySelector(".navbar-nav")
@@ -738,6 +703,30 @@
         link.onclick = () => {
           navbarNav.classList.remove("active")
         }
+      })
+
+      // swiper
+      var swiper = new Swiper(".card_swipper", {
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       })
     </script>
 
