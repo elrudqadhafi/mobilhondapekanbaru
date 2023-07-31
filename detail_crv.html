@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Produk</title>
+    <link rel="icon" href="assets/logotitle.png" />
+    <title>Honda CR-V</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -165,86 +172,53 @@
         height: 3px;
         opacity: 50%;
       }
-      .section::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
+      .card_swipper {
+        width: 90%;
       }
-      .section::-webkit-scrollbar-thumb {
-        background: var(--secondary);
-      }
-      .section {
-        display: flex;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding-left: 2px;
-      }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        border-radius: 10px;
-        width: 25rem;
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 5rem auto;
         text-align: center;
-        height: 23rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 300px;
-        margin-top: 1rem;
-        /* height: 150px; */
+      .card_swipper .swiper-slide img {
+        width: 250px;
+        margin-top: 3rem;
       }
-      .section .box h4 {
+      .card_swipper .swiper-slide h3 {
         font-size: 1.5rem;
-        font-weight: 600;
+        margin-top: 3rem;
+      }
+      .card_swipper .swiper-slide p {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi ul {
+        background-color: #cecece;
+        text-align: left;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
+        font-size: 1rem;
         margin-top: 1rem;
       }
-      .section .box h3 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
-      }
-      .section .box a {
-        font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
+      .card_swipper .swiper-button-next {
+        top: 40%;
         color: var(--secondary);
-        transition: 0.3s all ease-in-out;
       }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+      .card_swipper .swiper-button-prev {
+        top: 40%;
+        color: var(--secondary);
       }
 
       .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
+        margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
       }
       .wrapper img {
-        width: 100%;
-      }
-
-      .desk {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        margin-left: 2rem;
-      }
-
-      .desk .wrapper {
-        width: calc(33% - 20px);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-      }
-      .desk .wrapper h3 {
-        margin: 1rem 0;
+        width: 30%;
       }
       .color .row {
         display: grid;
@@ -258,7 +232,6 @@
       }
       .color .color-card {
         text-align: center;
-        /* border: 1px solid var(--text-color); */
       }
       .color .color-image img {
         width: 80%;
@@ -375,23 +348,14 @@
           height: auto;
           margin-top: 1.5rem;
         }
-        .section .box {
-          width: 100%;
-          height: 35rem;
-          margin-top: 2rem;
+        .card_swipper .swiper-button-next {
+          top: 45%;
         }
-        .section .box img {
-          margin-top: 2rem;
+        .card_swipper .swiper-button-prev {
+          top: 45%;
         }
-        .section .box h3 {
-          margin-bottom: 2rem;
-        }
-        .desk {
-          margin-left: 0;
-        }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
+        .wrapper img {
+          width: 40%;
         }
         .content .garis,
         .spek .garis,
@@ -448,34 +412,95 @@
 
       <div class="garis"></div>
 
-      <div class="section">
-        <div class="box">
-          <img src="assets/crvivtec.png" alt="" />
-          <h4>New CR-V 2.0 CVT</h4>
-          <h3>Rp 533.300.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Honda CR-V 2.0 CVT</h2>
+            <img src="assets/crvivtec.png" alt="brio" />
+            <h3>Rp 533.300.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>2.0L SOHC i-VTEC Engine 154PS</li>
+                <li>CVT with Earth Dreams Technology</li>
+                <li>18" Alloy Wheel</li>
+                <li>7" Touchscreen Display Audio</li>
+                <li>Full LED HeadLamp with Daytime Running Light</li>
+                <li>LED Fog Light Rounded</li>
+                <li>HFT Switch</li>
+                <li>6 AirBags</li>
+                <li>Cruise Control</li>
+                <li>HSA & VSA</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda CR-V 1.5L Turbo</h2>
+            <img src="assets/crvivtec.png" alt="brio" />
+            <h3>Rp 614.300.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC VTEC Turbo Engine 190PS</li>
+                <li>CVT with Earth Dreams Technology</li>
+                <li>18" Bold Alloy Wheel</li>
+                <li>3 Row Seat</li>
+                <li>
+                  7" Touchscreen Monitor with Multi Angle Rear View Camera
+                </li>
+                <li>8 Way Driver Power Seat Adjuster with Lumbar Support</li>
+                <li>Leather Seat, Steering, and Shift Knob</li>
+                <li>Wood Panel Garnish Interior</li>
+                <li>Rain Sensing Windshield Wiper</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda CR-V 1.5L Prestige Turbo</h2>
+            <img src="assets/crvprestigeturbo.png" alt="brio" />
+            <h3>Rp 677.600.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC VTEC Turbo Engine 190PS</li>
+                <li>CVT with Earth Dreams Technology</li>
+                <li>Power Panaromic Sunroof</li>
+                <li>Honda Sensing</li>
+                <li>Sequintial LED Turning Signal</li>
+                <li>Remote Engine Start</li>
+                <li>Hands-Free Acces Power Tailgate</li>
+                <li>Smart Key with Power Tailgate Button</li>
+                <li>Front Passenger 4 Way Power Seat Adjustmen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda CR-V Black Edition</h2>
+            <img src="assets/crvblackedition.png" alt="brio" />
+            <h3>Rp 692.600.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC VTEC Turbo Engine 190PS</li>
+                <li>CVT with Earth Dreams Technology</li>
+                <li>Honda Sensing</li>
+                <li>18" Sporty Black Alloy Wheels</li>
+                <li>Smoked HeadLight Extensions</li>
+                <li>Black Edition Emblem</li>
+                <li>Full Black Cabin</li>
+                <li>Dual Chrome Exhaust Pipe with New Finisher Design</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="box">
-          <img src="assets/crvturbo.png" alt="" />
-          <h4>New CR-V 1.5L Turbo</h4>
-          <h3>Rp 614.300.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/crvprestigeturbo.png" alt="" />
-          <h4>New CR-V 1.5L Prestige</h4>
-          <h3>Rp 677.600.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/crvblackedition.png" alt="" />
-          <h4>New CR-V Black Edition</h4>
-          <h3>Rp 692.600.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
       <div style="margin-bottom: 1rem; color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div style="margin-bottom: 4rem">
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
       </div>
     </div>
     <!-- harga pruduk end -->
@@ -485,79 +510,13 @@
       <h1>Spesifikasi & Design</h1>
 
       <div class="garis"></div>
-
-      <div class="desk">
-        <div class="wrapper">
-          <h3>Type 2.0L i-VTEC</h3>
-          <p>
-            - 2.0L SOHC i-VTEC Engine 154PS <br />
-            - CVT with Earth Dreams Technology <br />
-            - 18" Alloy Wheel <br />
-            - 7" Touchscreen Display Audio <br />
-            - Full LED HeadLamp with Daytime Running Light <br />
-            - LED Fog Light Rounded <br />
-            - HFT Switch <br />
-            - 6 Airbags <br />
-            - Cruise Control <br />
-            - HSA & VSA <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type 1.5L Turbo</h3>
-          <p>
-            - 1.5L DOHC VTEC Turbo Engine 190PS <br />
-            - CVT with Earth Dreams Technology <br />
-            - 18" Bold Alloy Wheel <br />
-            - 3 Row seat <br />
-            - 7" Touchscreen Monitor with Multi Angle <br />
-            &nbsp;&nbsp; Rear View Camera <br />
-            - 8-way Driver Power Seat Adjuster with <br />
-            &nbsp;&nbsp; Lumbar Support <br />
-            - Leather Seat, Steering, And Shift Knob <br />
-            - Wood Panel Garnish Interior <br />
-            - Rain Sensing Windshield wiper <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type 1.5L Prestige Turbo</h3>
-          <p>
-            - 1.5L DOHC VTEC Turbo Engine 190PS <br />
-            - CVT with Earth Dreams Technology <br />
-            - Power Panaromic Sunroof <br />
-            - Honda Sensing <br />
-            - Sequintial LED Turning Signal <br />
-            - Remote Engine Start <br />
-            - Hands-Free Access Power Tailgate <br />
-            - Smart Key with Power Tailgate Button <br />
-            - Front Passenger 4-way Power Seat Adjusment <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type 1.5L Black Edition</h3>
-          <p>
-            - 1.5L DOHC VTEC Turbo Engine 190PS <br />
-            - CVT with Earth Dreams Technology <br />
-            - Honda Sensing <br />
-            - Sporty Blacl Alloy Wheels 18" <br />
-            - Smoked Headlights Extension <br />
-            - Black Edition Emblem <br />
-            - Full Black Cabin <br />
-            - Dual Chrome Exhaust Pipe with <br />&nbsp;&nbsp; New Finisher
-            Design <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <img src="assets/crvin1.jpg" alt="" />
-          <img src="assets/crvin2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/crvtek1.jpg" alt="" />
-          <img src="assets/crvtek2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/crvhs1.jpg" alt="" />
-          <img src="assets/crvhs2.jpg" alt="" />
-        </div>
+      <div class="wrapper">
+        <img src="assets/crvin1.jpg" alt="" />
+        <img src="assets/crvin2.jpg" alt="" />
+        <img src="assets/crvtek1.jpg" alt="" />
+        <img src="assets/crvtek2.jpg" alt="" />
+        <img src="assets/crvhs1.jpg" alt="" />
+        <img src="assets/crvhs2.jpg" alt="" />
       </div>
     </div>
     <!-- spek end -->
@@ -636,6 +595,9 @@
     </footer>
     <!-- footer end -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
       // toggle class active
       const navbarNav = document.querySelector(".navbar-nav")
@@ -660,6 +622,30 @@
         link.onclick = () => {
           navbarNav.classList.remove("active")
         }
+      })
+
+      // swiper js
+      var swiper = new Swiper(".card_swipper", {
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       })
     </script>
 
