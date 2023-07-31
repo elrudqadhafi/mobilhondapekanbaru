@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Produk</title>
+    <link rel="icon" href="assets/logotitle.png" />
+    <title>Honda HR-V</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -166,89 +173,56 @@
         height: 3px;
         opacity: 50%;
       }
-      .section::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
+
+      .card_swipper {
+        width: 90%;
       }
-      .section::-webkit-scrollbar-thumb {
-        background: var(--secondary);
-      }
-      .section {
-        display: flex;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding-left: 2px;
-      }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        border-radius: 10px;
-        width: 20rem;
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 5rem auto;
         text-align: center;
-        height: 19rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 200px;
-        height: 150px;
+      .card_swipper .swiper-slide img {
+        width: 250px;
+        margin-top: 2rem;
       }
-      .section .box h4 {
+      .card_swipper .swiper-slide h3 {
         font-size: 1.5rem;
-        font-weight: 600;
+        margin-top: 3rem;
+      }
+      .card_swipper .swiper-slide p {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi ul {
+        background-color: #cecece;
+        text-align: left;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
+        font-size: 1rem;
         margin-top: 1rem;
       }
-      .section .box h3 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
+      .card_swipper .swiper-button-next {
+        top: 35%;
       }
-      .section .box a {
-        font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
-        color: var(--secondary);
-        transition: 0.3s all ease-in-out;
-      }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+      .card_swipper .swiper-button-prev {
+        top: 35%;
       }
 
       .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
+        margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
       }
       .wrapper img {
-        width: 100%;
-      }
-
-      .desk {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        margin-left: 2rem;
-      }
-
-      .desk .wrapper {
-        width: calc(33% - 20px);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-      }
-      .desk .wrapper h3 {
-        margin: 1rem 0;
+        width: 30%;
       }
       .color .row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         margin-top: 2rem;
         margin-bottom: 5rem;
       }
@@ -375,19 +349,18 @@
           height: auto;
           margin-top: 1rem;
         }
-        .section .box {
-          width: 100%;
-          height: 30rem;
+        .card_swipper .swiper-button-next {
+          top: 40%;
         }
-        .section .box h3 {
-          margin-bottom: 2rem;
+        .card_swipper .swiper-button-prev {
+          top: 40%;
         }
-        .desk {
-          margin-left: 0;
+
+        .wrapper img {
+          width: 40%;
         }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
+        .color .row {
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         }
         .content .garis,
         .spek .garis,
@@ -444,7 +417,130 @@
 
       <div class="garis"></div>
 
-      <div class="section">
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Honda HR-V S CVT</h2>
+            <img src="assets/hrvscvt.png" alt="brio" />
+            <h3>Rp 383.900.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>
+                  1.5L DOHC i-VTEC Engine ( Power 121PS,<br />
+                  Torque 145Nm )
+                </li>
+                <li>Honda Sensing</li>
+                <li>Full LED HeadLight with LED DRL</li>
+                <li>17" Alloy Wheels</li>
+                <li>4.2" Interactive TFT Meter Cluster</li>
+                <li>7" Touchscreen Display Audio with Smartphone Connection</li>
+                <li>Walk Away Auto Lock</li>
+                <li>Rear Seat Reminder</li>
+                <li>Hill Start Assist (HSA)</li>
+                <li>Hill Descent Control (HSC)</li>
+                <li>Vehicle Stability Assist (VSA)</li>
+                <li>ABS + ABD + BA</li>
+                <li>EPB + ABH</li>
+                <li>4 Speakers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda HR-V E CVT</h2>
+            <img src="assets/hrvecvt.png" alt="brio" />
+            <h3>Rp 403.900.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>
+                  Memiliki Semua Fitur Di Type S. <br />
+                  Ditambah:
+
+                  <li>Remote Engine Start</li>
+                  <li>Painted Fog & Bumper Garnish</li>
+                  <li>Paddle Shift</li>
+                  <li>Auto Foldable Door Mirror with LED Turning Signal</li>
+                  <li>2nd Row Accessories Power Outlet</li>
+                  <li>Leather-Fabric Combi Seat</li>
+                  <li>Half Leather Steering</li>
+                  <li>Leather Shift Knob</li>
+                  <li>Rear A/C Ventilation</li>
+                  <li>Rear Seat Armrest with Cup Holder</li>
+                </p>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda HR-V SE CVT</h2>
+            <img src="assets/hrvsecvt.png" alt="brio" />
+            <h3>Rp 424.100.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type E <br />Ditambah:</p>
+                <br />
+                <li>Sequential LED Turning Signal</li>
+                <li>Panaromic Glass Roof</li>
+                <li>LED Fog Light</li>
+                <li>18" Sporty Alloy Wheels</li>
+                <li>Piano Black Power Window Panel</li>
+                <li>8" Capacitive Touchscreen Display Audio</li>
+                <li>Honda LaneWatch</li>
+                <li>Electrostatic LED Map Light</li>
+                <li>Multi-Angle Rear View Camera</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda HR-V RS CVT</h2>
+            <img src="assets/hrvturbors.png" alt="brio" />
+            <h3>Rp 537.900.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type SE <br />Ditambah:</p>
+                <br />
+                <li>
+                  1.5L VTEC Turbo Engine (Power 177PS , <br />
+                  Torque 240Nm)
+                </li>
+                <li>Stylish RS Aero Kit</li>
+                <li>Dual Exhaust Pipe Finisher</li>
+                <li>
+                  Stylish Black Interior and Leather Trimmed with Red Stitches
+                </li>
+                <li>Door Upper Soft Pad</li>
+                <li>Leather-Wrapped Steering Wheel</li>
+                <li>
+                  7" Interactive TFT Meter Cluster with Costumized Display
+                  Setting
+                </li>
+                <li>4 Speakers + 2 Tweeter</li>
+                <li>3-Mode Drive System (Sport , Normal , ECON)</li>
+                <li>
+                  Hands-Free Access Power Tailgate + Walk Away Close<br />
+                </li>
+                <li>6 AirBags</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div style="color: var(--secondary)">
+        <em>**Tersedia Two Tone Color Dengan Penambahan Harga 2,5JT</em>
+      </div>
+      <div style="margin-bottom: 1rem; color: var(--secondary)">
+        <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div style="margin-bottom: 4rem">
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
+      </div>
+    </div>
+
+    <!-- <div class="section">
         <div class="box">
           <img src="assets/hrvscvt.png" alt="" />
           <h4>Honda HR-V S CVT</h4>
@@ -476,7 +572,7 @@
       <div style="margin-bottom: 1rem; color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
       </div>
-    </div>
+    </div> -->
     <!-- harga pruduk end -->
 
     <!-- spek start -->
@@ -485,102 +581,15 @@
 
       <div class="garis"></div>
 
-      <div class="desk">
-        <div class="wrapper">
-          <h3>Type S CVT</h3>
-          <p>
-            - 1.5L DOHC i-VTEC Engine (Power 121PS , <br />
-            &nbsp;&nbsp; Torque 145Nm) <br />
-            - Honda Sensing <br />
-            - Full LED HeadLights with LED DRL <br />
-            - 17" Alloy Wheels <br />
-            - 4.2" Interactive TFT Meter Cluster <br />
-            - 7" Touchscreen Display Audio with <br />
-            &nbsp;&nbsp; Smartphone Connection <br />
-            - Walk Away Auto Lock <br />
-            - Rear Seat Reminder <br />
-            - Hill Start Assist (HSA) <br />
-            - Hill Descent Control (HSC) <br />
-            - Vehicle Stability Assist (VSA) <br />
-            - ABS + ABD + BA <br />
-            - EPB + ABH <br />
-            - 4 Speakers.
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type E CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type S. <br />
-            Ditambah: <br />
-            <br />
-            - Remote Engine Start <br />
-            - Painted Fog & Bumper Garnish <br />
-            - Paddle Shift <br />
-            - Auto Foldable Door Mirror with LED Turning Signal <br />
-            - 2nd Row Accessories Power Outlet <br />
-            - Leather-Fabric Combi Seat<br />
-            - Half Leather Steering <br />
-            - Leather Shift Knob <br />
-            - Rear A/C Ventilation <br />
-            - Rear Seat Armrest with Cup Holder <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type SE CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type E CVT. <br />
-            Ditambah: <br />
-            <br />
-            - Sequential LED Turning Signal <br />
-            - Panaromic Glass Roof <br />
-            - LED Fog Lights <br />
-            - 18" Sporty Alloy Wheels <br />
-            - Piano Black Power Window Panel <br />
-            - 8" Capacitive Touchscreen Display Audio <br />
-            - Honda LaneWatch <br />
-            - Electrostatic LED Map Light <br />
-            - Multi-Angle Rear View Camera <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type RS CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type SE. <br />
-            Ditambah: <br />
-            <br />
-            - 1.5L VTEC Turbo Engine <br />
-            &nbsp;&nbsp; (Power 177PS , Torque 240Nm) <br />
-            - Stylish RS Aero Kit <br />
-            - Dual Exhaust Pipe Finisher <br />
-            - Stylish Black Interior and Leather Trimmed <br />
-            &nbsp;&nbsp; with Red Stitches <br />
-            - Door Upper Soft Pad <br />
-            - Leather-Wrapped Steering Wheel<br />
-            - 7" Interactive TFT Meter Cluster with Costumized <br />
-            &nbsp;&nbsp; Display Setting <br />
-            - 4 Speakers + 2 Tweeter<br />
-            - 3-Mode Drive System (Sport , Normal , ECON) <br />
-            - Hands-Free Access Power Tailgate + Walk-Away <br />
-            &nbsp;&nbsp; Close<br />
-            - 6 AirBags <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <img src="assets/hrvin1.jpg" alt="" />
-          <img src="assets/hrvin2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/hrvtek1.jpg" alt="" />
-          <img src="assets/hrvtek2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/hrvperfom1.jpg" alt="" />
-          <img src="assets/hrvperfom2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/hrvtek3.jpg" alt="" />
-          <img src="assets/hrvtek4.jpg" alt="" />
-        </div>
+      <div class="wrapper">
+        <img src="assets/hrvin1.jpg" alt="" />
+        <img src="assets/hrvin2.jpg" alt="" />
+        <img src="assets/hrvtek1.jpg" alt="" />
+        <img src="assets/hrvtek2.jpg" alt="" />
+        <img src="assets/hrvperfom1.jpg" alt="" />
+        <img src="assets/hrvperfom2.jpg" alt="" />
+        <img src="assets/hrvtek3.jpg" alt="" />
+        <img src="assets/hrvtek4.jpg" alt="" />
       </div>
     </div>
     <!-- spek end -->
@@ -703,6 +712,10 @@
     </footer>
     <!-- footer end -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- my js -->
     <script>
       // toggle class active
       const navbarNav = document.querySelector(".navbar-nav")
@@ -727,6 +740,30 @@
         link.onclick = () => {
           navbarNav.classList.remove("active")
         }
+      })
+
+      // swiper js
+      var swiper = new Swiper(".card_swipper", {
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       })
     </script>
 
