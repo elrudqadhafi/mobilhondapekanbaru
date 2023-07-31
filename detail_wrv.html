@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Produk</title>
+    <link rel="icon" href="assets/logotitle.png" />
+    <title>Honda WR-V</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -166,89 +173,58 @@
         height: 3px;
         opacity: 50%;
       }
-      .section::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
+
+      .card_swipper {
+        width: 90%;
       }
-      .section::-webkit-scrollbar-thumb {
-        background: var(--secondary);
-      }
-      .section {
-        display: flex;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding-left: 2px;
-      }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        border-radius: 10px;
-        width: 20rem;
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 5rem auto;
         text-align: center;
-        height: 19rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 200px;
-        height: 150px;
+      .card_swipper .swiper-slide img {
+        width: 250px;
+        margin-top: 2rem;
       }
-      .section .box h4 {
+      .card_swipper .swiper-slide h3 {
         font-size: 1.5rem;
-        font-weight: 600;
+        margin-top: 3rem;
+      }
+      .card_swipper .swiper-slide p {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi ul {
+        background-color: #cecece;
+        text-align: left;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
+        font-size: 1rem;
         margin-top: 1rem;
       }
-      .section .box h3 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
-      }
-      .section .box a {
-        font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
+      .card_swipper .swiper-button-next {
+        top: 35%;
         color: var(--secondary);
-        transition: 0.3s all ease-in-out;
       }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+      .card_swipper .swiper-button-prev {
+        top: 35%;
+        color: var(--secondary);
       }
 
       .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
+        margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
       }
       .wrapper img {
-        width: 100%;
-      }
-
-      .desk {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        margin-left: 2rem;
-      }
-
-      .desk .wrapper {
-        width: calc(33% - 20px);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-      }
-      .desk .wrapper h3 {
-        margin: 1rem 0;
+        width: 30%;
       }
       .color .row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         margin-top: 2rem;
         margin-bottom: 5rem;
       }
@@ -375,20 +351,20 @@
           height: auto;
           margin-top: 2rem;
         }
-        .section .box {
-          width: 100%;
-          height: 30rem;
+        .card_swipper .swiper-button-next {
+          top: 40%;
         }
-        .section .box h3 {
-          margin-bottom: 2rem;
+        .card_swipper .swiper-button-prev {
+          top: 40%;
         }
-        .desk {
-          margin-left: 0;
+        .wrapper img {
+          width: 40%;
         }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
+
+        .color .row {
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         }
+
         .content .garis,
         .spek .garis,
         .color .garis {
@@ -444,118 +420,152 @@
 
       <div class="garis"></div>
 
-      <div class="section">
-        <div class="box">
-          <img src="assets/wrvemt.png" alt="" />
-          <h4>WR-V 1.5L E M/T</h4>
-          <h3>Rp 277.900.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Honda WR-V 1.5L E M/T</h2>
+            <img src="assets/wrvemt.png" alt="brio" />
+            <h3>Rp 277.900.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC i-VTEC Engine 121PS</li>
+                <li>One Push Ignition System</li>
+                <li>7" Touchscreen Display Audio</li>
+                <li>2nd Power Outlet</li>
+                <li>16" Alloy Wheels</li>
+                <li>Door Mirror with Turning Signal</li>
+                <li>Rear Parking Camera with Multi Angle View</li>
+                <li>ABS + EBD + BA</li>
+                <li>Hill Start Assist (HSA)</li>
+                <li>Vehicle Stability Assist (VSA)</li>
+                <li>Digital A/C</li>
+                <li>Fabric Seat</li>
+                <li>4 Speakers</li>
+                <li>4 AirBag</li>
+                <li>Keyless Entry</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda WR-V 1.5L E CVT</h2>
+            <img src="assets/wrvecvt.png" alt="brio" />
+            <h3>Rp 287.900.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC i-VTEC Engine 121PS</li>
+                <li>One Push Ignition System</li>
+                <li>7" Touchscreen Display Audio</li>
+                <li>2nd Power Outlet</li>
+                <li>16" Alloy Wheels</li>
+                <li>Door Mirror with Turning Signal</li>
+                <li>Rear Parking Camera with Multi Angle View</li>
+                <li>ABS + EBD + BA</li>
+                <li>Hill Start Assist (HSA)</li>
+                <li>Vehicle Stability Assist (VSA)</li>
+                <li>Digital A/C</li>
+                <li>Fabric Seat</li>
+                <li>4 Speakers</li>
+                <li>4 AirBag</li>
+                <li>Keyless Entry</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda WR-V 1.5L RS CVT</h2>
+            <img src="assets/wrvrs.png" alt="brio" />
+            <h3>Rp 305.900.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type E CVT <br />Ditambah:</p>
+                <br />
+                <li>Full LED HeadLight with LED DRL</li>
+                <li>Rear Seat Reminder</li>
+                <li>Walk Away Auto Lock</li>
+                <li>17" Two Tome Alloy Wheels</li>
+                <li>Master Cluster with 4.2" TFT Display</li>
+                <li>6 Speakers</li>
+                <li>Leather Wrap Steering Wheel & Shift Knob</li>
+                <li>Leather Fabric Combi Seat</li>
+                <li>Auto A/C</li>
+                <li>
+                  Door Mirror with LED Turning Signal <br />
+                  (Auto Foldable)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda WR-V 1.5L RS CVT TT</h2>
+            <img src="assets/wrvrshs.png" alt="brio" />
+            <h3>Rp 308.400.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>Full LED HeadLight with LED DRL</li>
+                <li>Rear Seat Reminder</li>
+                <li>Walk Away Auto Lock</li>
+                <li>17" Two Tome Alloy Wheels</li>
+                <li>Master Cluster with 4.2" TFT Display</li>
+                <li>6 Speakers</li>
+                <li>Leather Wrap Steering Wheel & Shift Knob</li>
+                <li>Leather Fabric Combi Seat</li>
+                <li>Auto A/C</li>
+                <li>
+                  Door Mirror with LED Turning Signal <br />
+                  (Auto Foldable)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda WR-V 1.5L RS HS CVT</h2>
+            <img src="assets/wrvrshs.png" alt="brio" />
+            <h3>Rp 325.900.000**</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type RS CVT <br />Ditambah:</p>
+                <br />
+                <li>Honda Sensing</li>
+                <li>Honda LaneWatch</li>
+                <li>6 AirBags</li>
+                <li>USB Power Outlet</li>
+                <li>Auto HeadLight</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="box">
-          <img src="assets/wrvecvt.png" alt="" />
-          <h4>WR-V 1.5L E CVT</h4>
-          <h3>Rp 287.900.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/wrvrs.png" alt="" />
-          <h4>WR-V 1.5L RS CVT</h4>
-          <h3>Rp 305.900.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/wrvrshs.png" alt="" />
-          <h4>WR-V 1.5L RS HS CVT</h4>
-          <h3>Rp 325.900.000*</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/wrvrshs.png" alt="" />
-          <h4>WR-V 1.5L RS CVT TT</h4>
-          <h3>Rp 308.400.000*</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      <div style="margin-top: 1rem; color: var(--secondary)">
-        <em> **Tersedia Two Tone Color Dengan Penambahan Harga 2,5 JT</em>
+      <div style="color: var(--secondary)">
+        <em>**Tersedia Two Tone Color Dengan Penambahan Harga 2,5JT</em>
       </div>
       <div style="margin-bottom: 1rem; color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div style="margin-bottom: 4rem">
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
       </div>
     </div>
     <!-- harga pruduk end -->
 
     <!-- spek start -->
     <div class="spek">
-      <h1>Spesifikasi & Design</h1>
+      <h1>Design</h1>
 
       <div class="garis"></div>
 
-      <div class="desk">
-        <div class="wrapper">
-          <h3>Type E M/T & E CVT</h3>
-          <p>
-            - 1.5L DOHC i-VTEC Engine 121PS <br />
-            - One Push Ignition System <br />
-            - 7" Touchscreen Display Audio <br />
-            - 2nd Power Outlet <br />
-            - 16" Alloy Wheels <br />
-            - Door Mirror with Turning Signal<br />
-            - Rear Parking Camera with Multi Angle View <br />
-            - ABS + EBD + BA <br />
-            - HSA <br />
-            - VSA <br />
-            - 4 Speaker <br />
-            - Digital A/C <br />
-            - Fabric Seat <br />
-            - 4 AirBags <br />
-            - Keyless Entry.
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type RS CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type E CVT. <br />
-            Ditambah: <br />
-            <br />
-            - Full LED HeadLight With LED DRL <br />
-            - Rear Seat Reminder <br />
-            - Walk Away Auto Lock <br />
-            - 17" Two Tone Alloy Wheel <br />
-            - Master Cluster with 4.2" TFT display<br />
-            - 6 Speakers <br />
-            - Leather Wrap Steering Wheel & Shift Knob <br />
-            - Leather Fabric Combi Seat <br />
-            - Auto A/C <br />
-            - Door Mirror with LED Turning Signal <br />
-            &nbsp;&nbsp; (Auto Foldable).
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type RS HS CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type RS CVT. <br />
-            Ditambah: <br />
-            <br />
-            - Honda Sensing <br />
-            - Honda LaneWatch <br />
-            - 6 Airbags <br />
-            - USB Power Outlet <br />
-            - Auto HeadLight.
-          </p>
-        </div>
-        <div class="wrapper">
-          <img src="assets/wrvdepan.jpg" alt="" />
-          <img src="assets/wrvban.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/wrvstir.jpg" alt="" />
-          <img src="assets/wrvspedo.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/wrvsensing.jpg" alt="" />
-          <img src="assets/wrvsensing2.jpg" alt="" />
-        </div>
+      <div class="wrapper">
+        <img src="assets/wrvdepan.jpg" alt="" />
+        <img src="assets/wrvban.jpg" alt="" />
+        <img src="assets/wrvstir.jpg" alt="" />
+        <img src="assets/wrvspedo.jpg" alt="" />
+        <img src="assets/wrvsensing.jpg" alt="" />
+        <img src="assets/wrvsensing2.jpg" alt="" />
       </div>
     </div>
     <!-- spek end -->
@@ -664,6 +674,9 @@
     </footer>
     <!-- footer end -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
       // toggle class active
       const navbarNav = document.querySelector(".navbar-nav")
@@ -688,6 +701,30 @@
         link.onclick = () => {
           navbarNav.classList.remove("active")
         }
+      })
+
+      // swiper js
+      var swiper = new Swiper(".card_swipper", {
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       })
     </script>
 

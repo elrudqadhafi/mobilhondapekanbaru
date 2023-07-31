@@ -237,7 +237,7 @@
       }
       .color .row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         margin-top: 2rem;
         margin-bottom: 5rem;
       }
@@ -364,14 +364,10 @@
         .wrapper img {
           width: 40%;
         }
+        .color .row {
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
 
-        .desk {
-          margin-left: 0;
-        }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
-        }
         .content .garis,
         .spek .garis,
         .color .garis {
@@ -379,9 +375,11 @@
         }
         .card_swipper .swiper-button-next {
           top: 35%;
+          color: var(--secondary);
         }
         .card_swipper .swiper-button-prev {
           top: 35%;
+          color: var(--secondary);
         }
       }
       /* mobile */
