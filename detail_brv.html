@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Produk</title>
+    <link rel="icon" href="assets/logotitle.png" />
+    <title>Honda BR-V</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -166,86 +173,56 @@
         height: 3px;
         opacity: 50%;
       }
-      .section::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
+      .card_swipper {
+        width: 90%;
       }
-      .section::-webkit-scrollbar-thumb {
-        background: var(--secondary);
-      }
-      .section {
-        display: flex;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding-left: 2px;
-      }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        margin: auto;
-        border-radius: 10px;
-        width: 17rem;
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 5rem auto;
         text-align: center;
-        height: 19rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 200px;
-        height: 150px;
-      }
-      .section .box h4 {
-        font-size: 1.5rem;
-        font-weight: 600;
+      .card_swipper .swiper-slide img {
+        width: 300px;
         margin-top: 1rem;
       }
-      .section .box h3 {
+      .card_swipper .swiper-slide h3 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+      }
+      .card_swipper .swiper-slide p {
         font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
       }
-      .section .box a {
+      .card_swipper .swiper-slide .spesifikasi ul {
+        background-color: #cecece;
+        text-align: left;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
         font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
-        color: var(--secondary);
-        transition: 0.3s all ease-in-out;
+        margin-top: 1rem;
       }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+      .card_swipper .swiper-button-next {
+        top: 40%;
+        color: var(--secondary);
+      }
+      .card_swipper .swiper-button-prev {
+        top: 40%;
+        color: var(--secondary);
       }
 
       .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
-      }
-      .wrapper img {
-        width: 100%;
-      }
-
-      .desk {
-        display: flex;
-        flex-wrap: wrap;
         margin-top: 2rem;
-        margin-left: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
       }
 
-      .desk .wrapper {
-        width: calc(33% - 20px);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
+      .wrapper img {
+        width: 30%;
       }
-      .desk .wrapper h3 {
-        margin: 1rem 0;
-      }
+
       .color .row {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -375,19 +352,13 @@
           height: auto;
           margin-top: 1.5rem;
         }
-        .section .box {
-          width: 100%;
-          height: 30rem;
-        }
-        .section .box h3 {
-          margin-bottom: 2rem;
-        }
-        .desk {
-          margin-left: 0;
-        }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
+        .card_swipper .swiper-button-next {
+           top: 50%;
+           color: var(--secondary);
+          }
+        .card_swipper .swiper-button-prev {
+          top: 50%;
+          color: var(--secondary);
         }
         .content .garis,
         .spek .garis,
@@ -444,111 +415,127 @@
 
       <div class="garis"></div>
 
-      <div class="section">
-        <div class="box">
-          <img src="assets/brvsmt.png" alt="" />
-          <h4>All New BR-V S M/T</h4>
-          <h3>Rp 296.800.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>Honda New BR-V S M/T</h2>
+            <img src="assets/brvsmt.png" alt="brio" />
+            <h3>Rp 296.800.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC i-VTEC Engine 121PS with 4 Cylinder</li>
+                <li>ABS + EBD</li>
+                <li>16" Trim Wheels</li>
+                <li>LED HeadLamp with LED DRL</li>
+                <li>7" Touchscreen Display Audio with Smartphone Connection</li>
+                <li>HSA & VSA</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda New BR-V E M/T</h2>
+            <img src="assets/brvemt.png" alt="brio" />
+            <h3>Rp 311.000.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type S <br />Ditambah:</p>
+                <br />
+                <li>16" Alloy Wheels</li>
+                <li>LED FogLight</li>
+                <li>Raer Wiper</li>
+                <li>Smart Entry System</li>
+                <li>Walk Away Auto Lock</li>
+                <li>TFT Meter</li>
+                <li>2nd Rear Accessories Power Outlet</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda New BR-V E CVT</h2>
+            <img src="assets/brvecvt.png" alt="brio" />
+            <h3>Rp 321.000.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type S <br />Ditambah:</p>
+                <br />
+                <li>16" Alloy Wheels</li>
+                <li>LED FogLight</li>
+                <li>Raer Wiper</li>
+                <li>Smart Entry System</li>
+                <li>Walk Away Auto Lock</li>
+                <li>TFT Meter</li>
+                <li>2nd Row Accessories Power Outlet</li>
+                <li>Remote Engine Start (E CVT Only)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda New BR-V Prestige</h2>
+            <img src="assets/brvprescvt.png" alt="brio" />
+            <h3>Rp 344.000.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type E CVT <br />Ditambah:</p>
+                <br />
+                <li>Auto Foldable Side Door Mirror with LED Turning Signal</li>
+                <li>17" Alloy Wheels</li>
+                <li>2nd Row Armrest Console</li>
+                <li>3rd Row Accessories Power Outlite</li>
+                <li>Leather Seat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Honda New BR-V Prestige with HS</h2>
+            <img src="assets/brvpreshs.png" alt="brio" />
+            <h3>Rp 364.000.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <p>Memiliki Semua Fitur Di Type Preestige <br />Ditambah:</p>
+                <br />
+                <li>Honda Sensing</li>
+                <li>Honda LaneWatch</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="box">
-          <img src="assets/brvemt.png" alt="" />
-          <h4>All New BR-V E M/T</h4>
-          <h3>Rp 311.000.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/brvecvt.png" alt="" />
-          <h4>All New BR-V E CVT</h4>
-          <h3>Rp 321.000.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/brvprescvt.png" alt="" />
-          <h4>All New BR-V Prestige</h4>
-          <h3>Rp 344.000.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
-        <div class="box">
-          <img src="assets/brvpreshs.png" alt="" />
-          <h4>BR-V Prestige HS</h4>
-          <h3>Rp 364.000.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div style="color: var(--secondary)">
+        <em>**Tersedia Two Tone Color Dengan Penambahan Harga 2,5JT</em>
       </div>
       <div style="margin-bottom: 1rem; color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div style="margin-bottom: 4rem">
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
       </div>
     </div>
     <!-- harga pruduk end -->
 
     <!-- spek start -->
     <div class="spek">
-      <h1>Spesifikasi & Design</h1>
+      <h1>Design</h1>
 
       <div class="garis"></div>
-
-      <div class="desk">
         <div class="wrapper">
-          <h3>Type S M/T</h3>
-          <p>
-            - 1.5L DOHC i-VTEC Engine 121PS with 4 <br />
-            - ABS + EBD<br />
-            - 16" Trim Wheels <br />
-            - LED HeadLamp with LED DRL <br />
-            - 7" Touchscreen Display Audio with <br />
-            &nbsp;&nbsp; SmartPhone Connection <br />
-            - HSA <br />
-            - VSA <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type E M/T & E CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type S. <br />
-            Ditambah: <br />
-            <br />
-            - 16" Alloy Wheels <br />
-            - LED Foglight <br />
-            - Rear Wiper <br />
-            - Smart Entry System <br />
-            - Walk Away Auto Lock <br />
-            - TFT Meter <br />
-            - 2nd Roe Accessories Power Outlet <br />
-            - Remote Enginr Start (E CVT Only) <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type Prestige CVT</h3>
-          <p>
-            Memiliki Semua Fitur Di Type E CVT. <br />
-            Ditambah: <br />
-            <br />
-            - Auto Foldable Side Door Mirror with LED <br />
-            &nbsp;&nbsp; Turning Signal <br />
-            - 17" Alloy Wheels <br />
-            - 2nd Row Armrest Console <br />
-            - A3rd Row Accessories Power Outlite <br />
-            - Leather Seat <br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <h3>Type Prestige With Honde Sensing</h3>
-          <p>
-            Memiliki Semua Fitur Di Type Prestige CVT. <br />
-            Ditambah: <br />
-            <br />
-            - Honda Sensing <br />
-            - Honda LaneWatch<br />
-          </p>
-        </div>
-        <div class="wrapper">
+          <img src="assets/eksbrv1.jpg" alt="" />
+          <img src="assets/eksbrv2.jpg" alt="" />
           <img src="assets/brvdalam.jpg" alt="" />
           <img src="assets/brvac.jpg" alt="" />
-        </div>
-        <div class="wrapper">
+          <img src="assets/tekbrv.jpg" alt="" />
+          <img src="assets/tekbrv2.jpg" alt="" />
+          <img src="assets/tekbrv3.jpg" alt="" />
           <img src="assets/brvhs1.jpg" alt="" />
           <img src="assets/brvhs2.jpg" alt="" />
+        </div>
+        <div class="wrapper">
         </div>
       </div>
     </div>
@@ -636,6 +623,9 @@
     </footer>
     <!-- footer end -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
       // toggle class active
       const navbarNav = document.querySelector(".navbar-nav")
@@ -660,6 +650,30 @@
         link.onclick = () => {
           navbarNav.classList.remove("active")
         }
+      })
+
+      // swiper
+      var swiper = new Swiper(".card_swipper", {
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
       })
     </script>
 

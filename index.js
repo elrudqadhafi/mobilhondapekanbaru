@@ -38,6 +38,15 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message))
 })
 
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+})
+
 var swiper = new Swiper(".card_slider", {
   slidesPerView: 4,
   spaceBetween: 10,
@@ -62,22 +71,5 @@ var swiper = new Swiper(".card_slider", {
     1200: {
       slidesPerView: 4,
     },
-  },
-})
-
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 })

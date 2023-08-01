@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Produk</title>
+    <link rel="icon" href="assets/logotitle.png" />
+    <title>All New Honda City</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -166,73 +173,46 @@
         height: 3px;
         opacity: 50%;
       }
-      .section .box {
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        /* margin: auto; */
-        margin-left: 30rem;
-        border-radius: 10px;
-        width: 30rem;
+      .card_swipper {
+        width: 90%;
+      }
+      .card_swipper .swiper-slide {
+        max-width: 80;
+        width: 100%;
+        margin: 3rem auto;
         text-align: center;
-        height: 22rem;
-        margin-right: 1.2rem;
-        margin-top: 1.8rem;
-        margin-bottom: 1rem;
       }
-      .section .box img {
-        width: 400px;
+      .card_swipper .swiper-slide img {
+        width: 500px;
         margin-top: 2rem;
-        /* height: 150px; */
       }
-      .section .box h4 {
+      .card_swipper .swiper-slide h3 {
         font-size: 1.5rem;
-        font-weight: 600;
-        margin-top: 1rem;
+        margin-top: 3rem;
       }
-      .section .box h3 {
+      .card_swipper .swiper-slide p {
         font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 8px;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
       }
-      .section .box a {
+      .card_swipper .swiper-slide .spesifikasi ul {
+        width: 40%;
+        background-color: #cecece;
+        text-align: left;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+      }
+      .card_swipper .swiper-slide .spesifikasi li {
         font-size: 1rem;
-        border: 1px solid var(--secondary);
-        padding: 8px 1rem;
-        border-radius: 5px;
-        font-weight: 600;
-        color: var(--secondary);
-        transition: 0.3s all ease-in-out;
-      }
-      .section .box a:hover {
-        background-color: var(--secondary);
-        color: var(--bg);
-        transition: 0.3s all ease-in-out;
+        margin-top: 1rem;
       }
 
       .wrapper {
-        border: 1px solid var(--text-color);
-        border-radius: 5px;
-        padding: 1rem 1rem;
+        margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
       }
       .wrapper img {
-        width: 100%;
-      }
-
-      .desk {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        margin-left: 2rem;
-      }
-
-      .desk .wrapper {
-        width: calc(33% - 20px);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-      }
-      .desk .wrapper h3 {
-        margin: 1rem 0;
+        width: 30%;
       }
       .color .row {
         display: grid;
@@ -363,23 +343,14 @@
           height: auto;
           margin-top: 1rem;
         }
-        .section .box {
+        .card_swipper .swiper-slide img {
+          width: 250px;
+        }
+        .card_swipper .swiper-slide .spesifikasi ul {
           width: 100%;
-          height: 28rem;
-          margin-left: 0;
         }
-        .section .box img {
-          width: 80%;
-        }
-        .section .box h3 {
-          margin-bottom: 2rem;
-        }
-        .desk {
-          margin-left: 0;
-        }
-        .desk .wrapper {
-          width: 100%;
-          margin-right: 0;
+        .wrapper img {
+          width: 40%;
         }
         .content .garis,
         .spek .garis,
@@ -436,60 +407,54 @@
 
       <div class="garis"></div>
 
-      <div class="section">
-        <div class="box">
-          <img src="assets/hondacity2.png" alt="" />
-          <h4>All New Honda City</h4>
-          <h3>Rp 381.900.000</h3>
-          <a href="https://wa.me/6281268235749">Lebih Lanjut</a>
+      <div class="swiper card_swipper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h2>All New Honda City</h2>
+            <img src="assets/hondacity.png" alt="brio" />
+            <h3>Rp 381.900.000</h3>
+            <p>Spesifikasi</p>
+            <div class="spesifikasi">
+              <ul>
+                <li>1.5L DOHC i-VTEC Engine 121PS</li>
+                <li>16" Sporty Alloy Wheels</li>
+                <li>LED HeadLamp with LED DRL</li>
+                <li>LED Fog Light</li>
+                <li>Modern Matter Cluster</li>
+                <li>8" Advanced capacitive Touchscreen Display Audio</li>
+                <li>8 Airbags</li>
+                <li>6 AirBags</li>
+                <li>Paddle Shift</li>
+                <li>Remote Engine Start</li>
+                <li>Large Cargo Space</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div style="margin-bottom: 1rem; color: var(--secondary)">
+      <div style="color: var(--secondary)">
         <em>*Harga yang tertera adalah harga untuk nomor rangka tahun 2023</em>
+      </div>
+      <div style="margin-bottom: 4rem">
+        <b> Untuk Info Lebih Lanjut Silahkan Klik Tombol WhatsApp </b>
       </div>
     </div>
     <!-- harga pruduk end -->
 
     <!-- spek start -->
     <div class="spek">
-      <h1>Spesifikasi & Design</h1>
+      <h1>Design</h1>
 
       <div class="garis"></div>
-
-      <div class="desk">
-        <div class="wrapper">
-          <h3>Type E CVT</h3>
-          <p>
-            - 1.5L DOHC i-VTEC Engine 121PS <br />
-            - 16" Sporty Alloy Wheels <br />
-            - LED HeadLamp with LED DRL <br />
-            - LED Fog Light <br />
-            - Modern Matter Cluster <br />
-            - 8" Advanced capacitive Touchscreen <br />&nbsp;&nbsp; Display
-            Audio <br />
-            - 8 Speakers<br />
-            - 6 Airbags<br />
-            - Paddle Shift<br />
-            - Remote Engine Start<br />
-            - Large Cargo Space<br />
-          </p>
-        </div>
-        <div class="wrapper">
-          <img src="assets/cityeks1.jpg" alt="" />
-          <img src="assets/cityeks2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/cityin1.jpg" alt="" />
-          <img src="assets/cityin2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/citytek1.jpg" alt="" />
-          <img src="assets/citytek2.jpg" alt="" />
-        </div>
-        <div class="wrapper">
-          <img src="assets/citycom1.jpg" alt="" />
-          <img src="assets/citycom2.jpg" alt="" />
-        </div>
+      <div class="wrapper">
+        <img src="assets/cityeks1.jpg" alt="" />
+        <img src="assets/cityeks2.jpg" alt="" />
+        <img src="assets/cityin1.jpg" alt="" />
+        <img src="assets/cityin2.jpg" alt="" />
+        <img src="assets/citytek1.jpg" alt="" />
+        <img src="assets/citytek2.jpg" alt="" />
+        <img src="assets/citycom1.jpg" alt="" />
+        <img src="assets/citycom2.jpg" alt="" />
       </div>
     </div>
     <!-- spek end -->
