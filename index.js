@@ -59,6 +59,10 @@ var swiper = new Swiper(".card_slider", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
     320: {
       slidesPerView: 1,
     },
