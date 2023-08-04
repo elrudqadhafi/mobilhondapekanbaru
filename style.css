@@ -81,7 +81,6 @@ body {
 
 .navbar img {
   width: 2.5rem;
-  margin-left: 0;
 }
 
 .navbar .navbar-logo {
@@ -97,7 +96,6 @@ body {
   color: var(--bg);
   display: inline-block;
   font-size: 1rem;
-  font-weight: 500;
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
 }
@@ -474,12 +472,8 @@ footer .footer-info a {
 
   .hero img {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-top: 5rem;
-  }
-  .hero a.cta {
-    margin-left: 0;
-    /* padding: 0 2rem; */
   }
 
   .about .row {
@@ -514,6 +508,10 @@ footer .footer-info a {
     padding: 1rem;
     font-size: 1.4rem;
     width: 14rem;
+  }
+
+  .produk .produk-card {
+    margin-top: 2rem;
   }
 
   .kontak .row {

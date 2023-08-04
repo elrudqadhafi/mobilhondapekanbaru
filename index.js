@@ -29,10 +29,10 @@ const form = document.forms["honda-contact-form"]
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
-  alert("Terima Kasih, Pesan Anda Sudah terkirim. Saya akan menghubungi anda")
   form.reset()
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
+  .then((response) => {
+      alert("Terima Kasih, Pesan Anda Sudah terkirim. Saya akan menghubungi anda")
       console.log("Success!", response)
     })
     .catch((error) => console.error("Error!", error.message))
