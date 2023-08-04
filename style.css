@@ -224,6 +224,7 @@ body {
 .produk .produk-card {
   text-align: center;
   padding: 2rem;
+  margin: 1.5rem 0;
   transition: 0.3s all ease-in;
 }
 
@@ -508,10 +509,6 @@ footer .footer-info a {
     padding: 1rem;
     font-size: 1.4rem;
     width: 14rem;
-  }
-
-  .produk .produk-card {
-    margin-top: 2rem;
   }
 
   .kontak .row {
