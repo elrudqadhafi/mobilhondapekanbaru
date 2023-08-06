@@ -281,14 +281,12 @@ body {
 .why {
   padding: 2rem 10% 1rem;
 }
-
 .why h2 {
   text-align: center;
   font-weight: 600;
   color: var(--secondary);
   margin-bottom: 3rem;
 }
-
 .why .benefit {
   display: flex;
   align-items: center;
@@ -297,7 +295,6 @@ body {
   margin-bottom: 1rem;
   margin-left: 30rem;
 }
-
 .why .benefit p {
   margin-left: 3rem;
 }
