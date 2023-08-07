@@ -290,10 +290,10 @@ body {
 .why .benefit {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  margin-left: 30rem;
+  margin-left: 23rem;
 }
 .why .benefit p {
   margin-left: 3rem;
