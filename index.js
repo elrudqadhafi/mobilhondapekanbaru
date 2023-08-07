@@ -23,20 +23,29 @@ navbarLinks.forEach((link) => {
   }
 })
 
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxZoMWkhIaqe4BIAu2W-J497rRMMYvjZfeh3Lkt7gaB9zjiBMcI-JAUPdPbQPTtipvjlA/exec"
-const form = document.forms["honda-contact-form"]
+// contact form langsung ke whatsapp
+function whatsapp() {
+  const nama = document.getElementById("nama").value
+  const type = document.getElementById("type").value
+  const mobile = document.getElementById("mobile").value
+  const pesan = document.getElementById("pesan").value
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault()
-  form.reset()
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-  .then((response) => {
-      alert("Terima Kasih, Pesan Anda Sudah terkirim. Saya akan menghubungi anda")
-      console.log("Success!", response)
-    })
-    .catch((error) => console.error("Error!", error.message))
-})
+  const whatsappurl =
+    "https://wa.me/6281268235749?text=" +
+    "Nama :" +
+    nama +
+    "%0a" +
+    "Tipe Mobil :" +
+    type +
+    "%0a" +
+    "Nomor Hp :" +
+    mobile +
+    "%0a" +
+    "Pertanyaan :" +
+    pesan
+
+  window.open(whatsappurl, "_blank").focus()
+}
 
 var swiper = new Swiper(".mySwiper", {
   loop: true,

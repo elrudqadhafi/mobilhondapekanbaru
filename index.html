@@ -45,7 +45,7 @@
         <a href="#beranda">Beranda</a>
         <a href="#about">Marketing</a>
         <a href="#produk">Produk</a>
-        <a href="#testimoni">Gallery</a>
+        <a href="#testimoni">Galeri</a>
         <a href="#kontak">Kontak</a>
       </div>
 
@@ -321,7 +321,7 @@
 
     <!-- testimoni start -->
     <section id="testimoni" class="testimoni">
-      <h2><span>Gallery</span></h2>
+      <h2><span>Galeri</span></h2>
       <div class="slider_container">
         <div class="container">
           <div class="swiper card_slider">
@@ -401,22 +401,22 @@
 
         <form name="honda-contact-form">
           <div class="input-group">
-            <input type="text" name="nama" placeholder="Nama" />
+            <input type="text" id="nama" placeholder="Nama" />
           </div>
           <div class="input-group">
-            <input type="email" name="email" placeholder="Email" />
+            <input type="text" id="type" placeholder="Tipe Mobil" />
           </div>
           <div class="input-group">
-            <input type="number" name="nomor" placeholder="No hp" />
+            <input type="text" id="mobile" placeholder="No hp" />
           </div>
           <div class="input-group">
             <textarea
-              name="pesan"
+              id="pesan"
               rows="5"
               placeholder="Masukkan pesan"
             ></textarea>
           </div>
-          <button type="submit" class="btn">Kirim</button>
+          <button type="submit" class="btn" onclick="whatsapp()">Kirim</button>
         </form>
       </div>
     </section>
@@ -445,6 +445,7 @@
           <a href="#">Beranda</a>
           <a href="#about">Marketing</a>
           <a href="#produk">Produk</a>
+          <a href="#testimoni">Galeri</a>
           <a href="#kontak">Kontak</a>
         </nav>
         <div class="footer-social">
